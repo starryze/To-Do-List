@@ -56,6 +56,8 @@ function addTask(task, completed = false) {
         if (this.checked) {
             taskText.style.textDecoration = 'line-through';
             listItem.classList.add('completed');
+            todoList.removeChild(listItem);
+            todoList.appendChild(listItem);
         } else {
             taskText.style.textDecoration = 'none';
             listItem.classList.remove('completed');
